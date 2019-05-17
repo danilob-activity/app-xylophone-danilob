@@ -4,6 +4,7 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 import com.profdanilo.activity.R;
@@ -27,16 +28,28 @@ public class MainActivity extends AppCompatActivity {
     private int mASoundId;
     private int mBSoundId;
 
+    private SoundPool mSoundPool;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         // TODO: Create a new SoundPool
-
+        mSoundPool = new SoundPool(NR_OF_SIMULTANEOUS_SOUNDS, AudioManager.STREAM_MUSIC, 0);
 
         // TODO: Load and get the IDs to identify the sounds
+        mCSoundId = mSoundPool.load(getApplicationContext(), R.raw.note1_c, 1);
 
+    }
+
+    public void playC(View view) {
+        //Log.d("TocaMusica","Tocou nota C");
+        mSoundPool.play(mCSoundId, LEFT_VOLUME, RIGHT_VOLUME, PRIORITY, NO_LOOP, NORMAL_PLAY_RATE);
+    }
+
+
+    public void playD(View view) {
 
     }
 

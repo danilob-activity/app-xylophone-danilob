@@ -16,7 +16,9 @@
         android:id="@+id/c_key"
         android:background="@color/red"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:onClick="playC"
+        />
 
     <Button
         style="@style/KeyStyle"
@@ -25,7 +27,9 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:onClick="playD"
+        />
 
     <Button
         style="@style/KeyStyle"
@@ -76,8 +80,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textAuthorApp"
-        android:textColor="@android:color/black"
+        android:text="@string/teste"
+        android:textColor="@color/turquoise"
         android:textSize="15sp" />
 
 </LinearLayout>
